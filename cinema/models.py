@@ -40,6 +40,7 @@ class Actor(models.Model):
 
 
 def movie_image_path(instance: "Movie", filename: str) -> str:
+    """Create path for movie image"""
     _, extension = os.path.splitext(filename)
     return os.path.join(
         "uploads/movies/",
